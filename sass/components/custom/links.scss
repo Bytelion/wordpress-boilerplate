@@ -1,0 +1,49 @@
+.links_block {
+	@include margined;
+
+	overflow: hidden;
+}
+
+.links_block_inner {
+	@include row;
+}
+
+.links {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	@media #{$min_md} {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -28px;
+	}
+}
+
+.link_item {
+
+	@media #{$min_md} {
+		width: 50%;
+
+		display: flex;
+		padding: 0 28px;
+	}
+}
+
+.linktarget {
+	width: 100%;
+
+	border-bottom: 1px solid #eee;
+	display: block;
+	padding: 13px 0;
+}
+
+.link_inner {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+}
+
+.link_label {}
+
+.link_icon {}

@@ -1,0 +1,24 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+body {
+	min-width: 300px;
+}
+
+a {
+	text-decoration: none;
+}
+
+svg {
+	height: 16px;
+	width: 16px;
+
+	display: block;
+	fill: currentColor;
+	transition:
+		fill .25s,
+		stroke .25s;
+}

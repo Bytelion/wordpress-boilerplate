@@ -1,0 +1,40 @@
+.cards_block {
+	@include margined;
+
+	overflow: hidden;
+}
+
+.cards_block_inner {
+	@include row;
+}
+
+.cards {
+
+	.slick-list {
+		margin: 0 -10px;
+	}
+}
+
+.card {
+	padding: 0 10px;
+}
+
+.card_figure {
+	margin: 0;
+}
+
+.card_image {
+	width: 100%;
+
+	display: block;
+}
+
+.card_details {
+	margin-top: 10px;
+}
+
+.card_caption {
+	@include body_text;
+
+	margin: 0;
+}

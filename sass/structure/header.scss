@@ -1,0 +1,27 @@
+.page_header {
+	position: relative;
+	background: #000;
+	color: #fff;
+	padding: 15px 0;
+}
+
+.page_header_inner {
+	@include row($mq_min_xxl);
+
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+}
+
+.custom-logo-link {
+	max-width: 60px;
+
+	display: block;
+
+	img {
+		height: auto;
+		width: 100%;
+
+		display: block;
+	}
+}

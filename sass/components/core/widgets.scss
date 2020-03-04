@@ -1,0 +1,88 @@
+/* ================
+Categories
+================ */
+
+.categories {
+	@include row;
+	@include margined;
+}
+
+.wp-block-categories-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.cat-item {
+
+	a {}
+}
+
+.wp-block-categories-dropdown {
+
+	select {}
+}
+
+
+/* ================
+Latest Posts
+================ */
+
+.wp-block-latest-posts {
+	@include row;
+	@include margined;
+
+	list-style: none;
+
+	li {
+		border-bottom: 1px solid #eee;
+		margin-bottom: 30px;
+		padding-bottom: 30px;
+	}
+
+	a {}
+}
+
+.wp-block-latest-posts__post-date {}
+
+
+/* ================
+RSS
+================ */
+
+.wp-block-rss {
+	@include row;
+	@include margined;
+
+	list-style: none;
+}
+
+.wp-block-rss__item {
+	border-bottom: 1px solid #eee;
+	margin-bottom: 30px;
+	padding-bottom: 30px;
+}
+
+.wp-block-rss__item-title {
+	@include h4;
+
+	margin-bottom: 10px;
+
+	a {
+		display: bkock;
+	}
+}
+
+.wp-block-rss__item-publish-date {
+	@include caption_text;
+}
+
+.wp-block-rss__item-author {
+	@include caption_text;
+}
+
+.wp-block-rss__item-excerpt {
+	@include body_text;
+
+	margin-top: 10px;
+}

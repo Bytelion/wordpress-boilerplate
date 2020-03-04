@@ -1,0 +1,41 @@
+[type="email"],
+[type="phone"],
+[type="tel"],
+[type="text"],
+textarea {
+	width: 100%;
+
+	-webkit-appearance: none;
+	appearance: none;
+	border: 1px solid #000;
+	padding: 10px 20px;
+}
+
+[type="checkbox"],
+[type="radio"] {}
+
+select {
+	width: 100%;
+
+	-webkit-appearance: none;
+	appearance: none;
+	background: none;
+	border: 1px solid #000;
+	border-radius: 0;
+	cursor: pointer;
+	padding: 10px 20px;
+}
+
+[type="submit"] {
+	@include button;
+
+	-webkit-appearance: none;
+	appearance: none;
+	border: 0;
+	cursor: pointer;
+	display: inline-block;
+	vertical-align: top;
+
+	&:hover,
+	&:focus {}
+}
