@@ -4,6 +4,8 @@ This theme provides a skeleton set of starter gutenberg blocks and styles built 
 
 ## Getting Started
 
+As this repo is a theme, make sure to [install wordpress](https://wordpress.org/support/article/how-to-install-wordpress/) first. Once you've installed wordpress, clone this repo into `wp-content/themes/` in a new folder. Make sure to then activate this theme under `Appearance >> Themes` in the wordpress admin panel.
+
 Since this theme uses a gulp based workflow, you'll need a little extra work to manage custom blocks and styles. That includes setting up [node with npm](https://nodejs.org/en/) and following the prompts below. Open a terminal in the current Bytelion theme directory:
 
 ```
