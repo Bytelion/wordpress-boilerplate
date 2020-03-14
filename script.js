@@ -3019,7 +3019,7 @@ var Accordion = (function() {
 	};
 
 	var setup = function() {
-		items = document.querySelectorAll('.accordion_trigger');
+		items = document.querySelectorAll('.accordion_swap');
 	};
 
 	var bindUI = function() {
@@ -3029,8 +3029,8 @@ var Accordion = (function() {
 	};
 
 	var toggleAccordion = function() {
-		this.classList.toggle('active');
-		this.nextElementSibling.classList.toggle('active');
+		this.classList.toggle('visible');
+		this.nextElementSibling.classList.toggle('visible');
 	};
 
 	return {
@@ -3043,7 +3043,7 @@ var CardGroup = (function() {
 	};
 
 	var setup = function() {
-		jQuery('.cards').slick({
+		jQuery('.card_group_items').slick({
 			dots: true,
 			infinite: false,
 			slidesToShow: 4,
@@ -3096,12 +3096,12 @@ var Menu = (function() {
 	};
 
 	var bindUI = function() {
-		document.querySelector('.page_menu_button').addEventListener('click', toggleMenu);
-		document.querySelector('.page_menu_close').addEventListener('click', toggleMenu);
+		document.querySelector('.menu_button').addEventListener('click', toggleMenu);
+		document.querySelector('.menu_close').addEventListener('click', toggleMenu);
 	};
 
 	var toggleMenu = function() {
-		document.querySelector('.page_menu').classList.toggle('visible');
+		document.querySelector('.menu').classList.toggle('visible');
 	};
 
 	return {

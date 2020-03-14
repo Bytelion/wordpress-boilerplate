@@ -14,25 +14,30 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
-		<div class="page">
-			<header class="page_header">
-				<a class="page_skip" href="#page_main">Skip to Content</a>
-				<div class="page_header_inner">
-					<?php
-						the_custom_logo();
-						wp_nav_menu(
-							array(
-								'container_class' => 'main_menu main_menu_lg',
-								'menu_class' => 'main_menu_list main_menu_list_lg',
-								'theme_location' => 'main_menu'
-							)
-						);
-					?>
-					<button class="page_menu_button" aria-label="Toggle Menu">
-						<span class="page_menu_button_inner">
-							<span class="page_menu_button_icon"><?php icon('menu'); ?></span>
-							<span class="page_menu_button_label">Toggle Menu</span>
-						</span>
-					</button>
+		<div class="page_wrapper">
+			<header class="header" id="header">
+				<a class="skip_link" id="skip_link" href="#skip_content">Skip to Main Content</a>
+				<div class="header_primary">
+					<div class="row">
+						<div class="header_primary_inner">
+							<?php
+								the_custom_logo();
+								wp_nav_menu(
+									array(
+										'container_class' => 'main_menu main_menu_lg',
+										'menu_class' => 'main_menu_list main_menu_list_lg',
+										'theme_location' => 'main_menu'
+									)
+								);
+							?>
+
+							<button class="menu_button" aria-label="Toggle Menu">
+								<span class="menu_button_inner">
+									<span class="menu_button_icon"><?php icon('menu'); ?></span>
+									<span class="menu_button_label">Toggle Menu</span>
+								</span>
+							</button>
+						</div>
+					</div>
 				</div>
 			</header>

@@ -1,0 +1,33 @@
+// =============================================================================
+// Fonts
+// =============================================================================
+
+@mixin font-face($name, $list) {
+	@each $file, $weight, $style in $list {
+		@font-face {
+			font-family: $name;
+			src: url("../fonts/#{$file}.otf");
+			font-weight: $weight;
+
+			@if $style {
+				font-style: $style;
+			}
+		}
+	}
+}
+
+@mixin nd($weight: null) {
+	font-family: "Heebo", sans-serif;
+
+	@if $weight != null {
+		font-weight: $weight;
+	}
+}
+
+@mixin nt($weight: null) {
+	font-family: "Heebo", sans-serif;
+
+	@if $weight != null {
+		font-weight: $weight;
+	}
+}

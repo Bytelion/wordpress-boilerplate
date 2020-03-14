@@ -1,0 +1,135 @@
+/* ==========================================================================
+	Contact
+============================================================================= */
+
+.contact_block {
+	@include margined_xl;
+}
+
+.contact_block_row {
+	@include row;
+}
+
+.contact_block_inner {
+	border-top: 5px solid $gray_10;
+	border-bottom: 5px solid $gray_10;
+	padding: 30px 0;
+
+	@media #{$min_lg} {
+		padding: 50px 0;
+	}
+}
+
+.contact {}
+
+.contact_header {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 36px;
+
+	@media #{$min_lg} {
+		margin-bottom: 50px;
+	}
+}
+
+.contact_info {
+	flex: auto;
+	padding-right: 20px;
+}
+
+.contact_name {
+	@include h3;
+
+	margin: 0;
+}
+
+.contact_title {
+	@include body_text;
+}
+
+.contact_figure {
+	width: 60px;
+
+	@media #{$min_sm} {
+		width: 100px;
+	}
+}
+
+.contact_image {
+	height: auto;
+	width: 100%;
+	border-radius: 50%;
+	display: block;
+}
+
+.contact_body {}
+
+.contact_details {
+
+	@media #{$min_sm} {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -10px;
+	}
+}
+
+.contact_detail {
+	margin-bottom: 50px;
+
+	@media #{$min_sm} {
+		width: 50%;
+
+		padding: 0 10px;
+	}
+
+	@media #{$min_lg} {
+		width: 25%;
+
+		margin-bottom: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.contact_detail_label {
+	@include label_text;
+
+	margin-bottom: 16px;
+}
+
+.contact_detail_item {
+	margin-bottom: 18px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.contact_detail_hint {
+	@include nt;
+
+	font-size: 12px;
+	margin-bottom: 4px;
+}
+
+.contact_detail_info {
+	@include nt;
+
+	display: block;
+	font-size: 15px;
+	line-height: (22 / 15);
+
+	&[href] {
+		color: $accent;
+		text-decoration: underline;
+		transition: color $base_speed;
+
+		&:hover,
+		&:focus {
+			color: #000;
+		}
+	}
+}

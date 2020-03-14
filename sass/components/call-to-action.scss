@@ -1,0 +1,68 @@
+/* ==========================================================================
+	Call to Action
+============================================================================= */
+
+.cta {
+	@include margined_xl;
+}
+
+.cta_row {
+	@include row;
+}
+
+.cta_inner {
+	box-shadow: inset 0 0 0 5px $gray_10;
+	padding: 30px;
+
+	@media #{$min_lg} {
+		align-items: center;
+		display: flex;
+		padding: 40px;
+	}
+
+	@media #{$min_xl} {
+		padding: 80px;
+	}
+
+	@media print {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.cta_body {}
+
+.cta_title {
+	@include h2;
+
+	margin: 0 0 8px;
+}
+
+.cta_description {
+	@include body_text;
+
+	margin-bottom: 20px;
+
+	@media #{$min_lg} {
+		margin-bottom: 0;
+		padding-right: 60px;
+	}
+
+	@media #{$min_xl} {
+		padding-right: 100px;
+	}
+
+	p {
+		margin: 0;
+	}
+}
+
+.cta_action {}
+
+.cta_link {
+	@include button_fill("accent");
+
+	display: inline-block;
+	vertical-align: top;
+	white-space: nowrap;
+}

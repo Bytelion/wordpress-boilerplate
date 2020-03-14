@@ -11,8 +11,8 @@
 		'contact',
 		'cover',
 		'gallery',
-		'links',
-		'topics'
+		'link-group',
+		'topic-row'
 	);
 
 	foreach ($blocks as $block) {

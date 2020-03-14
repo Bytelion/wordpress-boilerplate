@@ -1,0 +1,95 @@
+/* ==========================================================================
+	Card Group
+============================================================================= */
+
+.card_group {
+	@include margined_xl;
+}
+
+.card_group_inner {}
+
+.card_group_header {
+	margin-bottom: 30px;
+
+	@media #{$min_xl} {
+		margin-bottom: 45px;
+	}
+}
+
+.card_group_header_row {
+	@include row($mq_min_md);
+}
+
+.card_group_title {
+	@include h2;
+
+	margin: 0 0 5px;
+}
+
+.card_group_description {
+	@include body_text;
+
+	p {
+		margin: 0;
+	}
+}
+
+.card_group_body {}
+
+.card_group_body_row {
+	@include row($mq_min_xxl);
+}
+
+.card_group_items {
+	margin: 0 -10px;
+}
+
+.card_group_item {
+	padding: 0 10px;
+
+	@media print {
+		margin-bottom: 25px;
+	}
+}
+
+.card_group_item_figure {
+	margin-bottom: 18px;
+
+	@media print {
+		display: none;
+	}
+}
+
+.card_group_item_image {
+	height: auto;
+	width: 100%;
+
+	display: block;
+}
+
+.card_group_item_body {}
+
+.card_group_item_title {
+	@include h4;
+
+	margin: 0;
+}
+
+.card_group_item_title_label {}
+
+.card_group_item_description {
+	@include body_text;
+
+	margin: 8px 0 0;
+
+	a {
+		color: $accent;
+		text-decoration: underline;
+		transition: color $base_speed;
+
+		&:hover,
+		&:focus {
+			color: #000;
+		}
+	}
+}

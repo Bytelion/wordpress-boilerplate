@@ -1,0 +1,203 @@
+/* ================
+Audio
+================ */
+
+.wp-block-audio {
+	@include row;
+	@include margined_xl;
+
+	audio {
+		width: 100%;
+		display: block;
+	}
+}
+
+
+/* ================
+File
+================ */
+
+.wp-block-file {
+	@include row;
+	@include margined_xl;
+
+	a:first-child {
+		display: inline-block;
+		margin-right: 10px;
+	}
+}
+
+.wp-block-file__button {
+	@include site-button;
+
+	display: inline-block;
+}
+
+
+/* ================
+Gallery
+================ */
+
+.wp-block-gallery {
+	@include row;
+	@include margined_xl;
+}
+
+.blocks-gallery-grid {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	@media #{$min_sm} {
+		@include columns(2, 20px);
+	}
+
+	.columns-3 & {
+
+		@media #{$min_md} {
+			column-count: 3;
+		}
+	}
+
+	.columns-4 & {
+
+		@media #{$min_md} {
+			column-count: 3;
+		}
+
+		@media #{$min_xl} {
+			column-count: 4;
+		}
+	}
+}
+
+.blocks-gallery-item {
+
+	&:not(:last-child) {
+		margin-bottom: 20px;
+	}
+
+	figure {
+		margin: 0;
+	}
+
+	img {
+		width: 100%;
+
+		display: block;
+	}
+
+	figcaption {
+		@include caption_text;
+
+		margin-top: 10px;
+	}
+}
+
+.blocks-gallery-caption {}
+
+
+/* ================
+Image
+================ */
+
+.image {
+	@include row;
+	@include margined_xl;
+}
+
+.wp-block-image {
+	margin: 0;
+
+	figure {
+		margin: 0 0 40px;
+
+		&.aligncenter {
+			text-align: center;
+		}
+
+		&.alignleft {
+
+			@media #{$min_sm} {
+				float: left;
+				margin-right: 40px;
+			}
+		}
+
+		&.alignright {
+
+			@media #{$min_sm} {
+				float: right;
+				margin-left: 40px;
+			}
+		}
+	}
+
+	a {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	img {
+		max-width: 100%;
+
+		display: block;
+	}
+
+	figcaption {
+		@include caption_text;
+
+		margin-top: 10px;
+	}
+}
+
+
+/* ================
+Quote
+================ */
+
+.wp-block-quote {
+	@include row;
+	@include margined_xl;
+
+	p {
+		@include intro_text;
+
+		margin: 0;
+	}
+
+	cite {
+		display: block;
+		font-style: normal;
+		margin-top: 10px;
+		text-align: right;
+
+		&:before {
+			content: "- ";
+		}
+	}
+}
+
+
+/* ================
+Video
+================ */
+
+.wp-block-video {
+	@include row;
+	@include margined_xl;
+
+	video {
+		width: 100%;
+
+		background: #000;
+		display: block;
+		object-fit: cover;
+	}
+
+	figcaption {
+		@include caption_text;
+
+		margin-top: 10px;
+	}
+}

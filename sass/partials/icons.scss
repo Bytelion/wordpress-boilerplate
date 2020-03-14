@@ -1,0 +1,55 @@
+/* ==========================================================================
+	Icons
+============================================================================= */
+
+.icon {
+	display: block;
+	fill: currentColor;
+	margin: auto;
+	stroke: inherit;
+	transition:
+		fill $base_speed,
+		stroke $base_speed;
+
+	$icons: (
+		(arrow_left, 20, 20),
+		(arrow_right, 20, 20),
+		(caret_down, 12, 6),
+		(caret_right, 8, 14),
+		(caret_left, 8, 14),
+		(clock, 16, 16),
+		(close, 20, 20),
+		(expand, 10, 18),
+		(external, 19, 18),
+		(facebook, 25, 25),
+		(fax, 18, 16),
+		(file, 17, 20),
+		(flickr, 22, 10),
+		(fs_logo, 50, 33),
+		(home, 14, 14),
+		(instagram, 25, 25),
+		(label, 14, 14),
+		(linkedin, 25, 25),
+		(logo, 180, 65),
+		(mail, 22, 16),
+		(menu, 22, 12),
+		(minus, 14, 2),
+		(phone, 16, 16),
+		(place, 12, 16),
+		(play, 21, 20),
+		(plus, 14, 14),
+		(search, 18, 18),
+		(twitter, 31, 25),
+		(video_pause, 20, 20),
+		(video_play, 20, 20),
+		(vimeo, 19, 18),
+		(youtube, 36, 25));
+
+	@each $label, $width, $height in $icons {
+
+		&_#{$label} {
+			width: $width#{px};
+			height: $height#{px};
+		}
+	}
+}

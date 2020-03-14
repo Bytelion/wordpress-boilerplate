@@ -3,11 +3,13 @@ const browserSync = require('browser-sync').create();
 const fs = require('fs');
 const concat = require('gulp-concat');
 const sass = require('gulp-sass');
+const sassGlob = require('gulp-sass-glob');
 var packageJson = JSON.parse(fs.readFileSync('package.json'));
 
 
 function compileSass() {
-	return src('sass/style.scss')
+	return src('sass/styles.scss')
+		.pipe(sassGlob())
 		.pipe(sass().on('error', sass.logError))
 		.pipe(dest('./'))
 		.pipe(browserSync.stream());
@@ -17,7 +19,7 @@ function compileSass() {
 function compileJs() {
 	return src([
 		'javascript/vendor/*.js',
-		'javascript/modules/*.js',
+		'javascript/components/*.js',
 		'javascript/zero.js',
 	])
 		.pipe(concat('script.js'))

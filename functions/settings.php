@@ -6,6 +6,7 @@
 	function crb_attach_theme_options() {
 		Container::make( 'theme_options', 'Theme Options' )
 			->add_fields( array(
+				Field::make( 'text', 'google_maps_url', 'Google Maps Url' ),
 				Field::make( 'text', 'street', 'Street' ),
 				Field::make( 'text', 'city', 'City' ),
 				Field::make( 'text', 'state', 'State' ),

@@ -1,41 +1,226 @@
-[type="email"],
-[type="phone"],
-[type="tel"],
-[type="text"],
-textarea {
-	width: 100%;
+/* ==========================================================================
+	Forms
+============================================================================= */
 
-	-webkit-appearance: none;
-	appearance: none;
-	border: 1px solid #000;
-	padding: 10px 20px;
+@mixin form_label($theme: null) {
+	@include body_text;
 }
 
-[type="checkbox"],
-[type="radio"] {}
-
-select {
-	width: 100%;
-
-	-webkit-appearance: none;
-	appearance: none;
-	background: none;
+@mixin input($theme: null) {
 	border: 1px solid #000;
 	border-radius: 0;
-	cursor: pointer;
-	padding: 10px 20px;
+	padding: 10px;
 }
 
-[type="submit"] {
-	@include button;
 
-	-webkit-appearance: none;
-	appearance: none;
-	border: 0;
-	cursor: pointer;
+/* Select
+============================================================================= */
+
+@mixin select() {
+	position: relative;
+
 	display: inline-block;
-	vertical-align: top;
 
-	&:hover,
-	&:focus {}
+	select {
+		width: 100%;
+
+		appearance: none;
+		-webkit-appearance: none;
+		background: none;
+		border: 1px solid #000;
+		border-radius: 3px;
+		color: inherit;
+		cursor: pointer;
+		display: inline-block;
+		line-height: normal;
+		margin: 0;
+		outline: 0;
+		padding: 14px 40px 14px 20px;
+
+		// Media query to target Firefox only
+		@-moz-document url-prefix() {
+			// Firefox hack to hide the arrow
+			text-indent: 0.01px;
+			text-overflow: "";
+		}
+
+		// Undo the Firefox inner focus ring
+		&:focus:-moz-focusring {
+			color: transparent;
+			text-shadow: 0 0 0 #000;
+		}
+
+		// Hide the arrow in IE10 and up
+		&::-ms-expand {
+			display: none;
+		}
+
+		&:after {
+			width: 0;
+			height: 0;
+
+			position: absolute;
+			top: 50%;
+			right: 20px;
+
+			border: 6px solid transparent;
+			border-top-color: #000;
+			content: "";
+			display: inline-block;
+			margin-top: -3px;
+			pointer-events: none;
+		}
+
+		option {
+
+			@-moz-document url-prefix() {
+				// <option> elements inherit styles from <select>, so reset them
+				background-color: #fff;
+			}
+		}
+	}
+}
+
+/* Select Themes
+============================================================================= */
+
+@mixin select_gray() {
+
+	select {
+		background-color: #ccc;
+
+		&:focus {
+			box-shadow:
+				0 0 0 2px #fff,
+				0 0 0 4px #000;
+		}
+
+		&:active {
+			color: #fff;
+			background-color: #000;
+		}
+	}
+}
+
+
+/* Checkbox and Radio
+============================================================================= */
+
+@mixin option() {
+	position: relative;
+
+	input {
+		position: absolute;
+ 		z-index: -2;
+
+		opacity: 0;
+
+		&:checked {
+
+			~ [class$="indicator"] {
+
+				&:before {
+					transform: scale(1);
+				}
+			}
+		}
+	}
+
+	[class$="indicator"] {
+		width: 20px;
+		height: 20px;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		display: block;
+		pointer-events: none;
+		text-align: center;
+		transition: background-color $base_speed;
+		user-select: none;
+
+		&:before {
+			@include absolute_center;
+
+			display: block;
+			transform: scale(0);
+			transition: transform $base_speed;
+		}
+	}
+}
+
+@mixin checkbox() {
+	@include option;
+
+	[class$="indicator"] {
+
+		&:before {
+			width: 14px;
+			height: 14px;
+
+			content:  "\2713";
+			font-size: 14px;
+			line-height: 1;
+		}
+	}
+}
+
+
+@mixin radio() {
+	@include option;
+
+	[class$="indicator"] {
+		border-radius: 50%;
+
+		&:before {
+			width: 50%;
+			height: 50%;
+
+			border-radius: inherit;
+			content: "";
+		}
+	}
+}
+
+@mixin option_gray() {
+
+	input {
+
+		&:checked {
+
+			~ [class$="indicator"] {
+				background-color: #000;
+			}
+		}
+
+		&:focus {
+
+			~ [class$="indicator"] {
+				box-shadow:
+					0 0 0 2px #fff,
+					0 0 0 4px #000;
+			}
+		}
+	}
+
+	[class$="indicator"] {
+		background-color: #ccc;
+		color: #fff;
+	}
+}
+
+@mixin checkbox_gray() {
+	@include option_gray;
+}
+
+@mixin radio_gray() {
+	@include option_gray;
+
+	[class$="indicator"] {
+
+		&:before {
+			background-color: #fff;
+		}
+	}
 }

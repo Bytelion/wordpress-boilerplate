@@ -1,0 +1,154 @@
+/* ==========================================================================
+	Accordion
+============================================================================= */
+
+.accordion {
+	@include margined_xl;
+}
+
+.accordion_row {
+	@include row;
+}
+
+.accordion_inner {}
+
+.accordion_header {
+	margin-bottom: 30px;
+
+	@media #{$min_lg} {
+		margin-bottom: 60px;
+	}
+}
+
+.accordion_title {
+	@include h2;
+
+	margin: 0 0 6px;
+}
+
+.accordion_description {
+	@include body_text;
+
+	p {
+		margin: 0;
+	}
+}
+
+
+/* Accordion Items
+============================================================================= */
+
+.accordion_items {
+	border-top: 2px solid $gray_10;
+}
+
+.accordion_item {
+	border-bottom: 2px solid $gray_10;
+}
+
+.accordion_swap {
+	width: 100%;
+
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	padding: 28px 0 27px;
+	text-align: left;
+
+	@media print {
+		padding: 20px 0 10px;
+	}
+}
+
+.accordion_swap_info {
+	flex: 1;
+	padding-right: 20px;
+}
+
+.accordion_swap_title {
+	@include h4;
+
+	margin-right: 10px;
+}
+
+.accordion_swap_subtitle {
+	@include body_text;
+
+	@media #{$min_xl} {
+		font-size: 21px;
+		line-height: (38 / 21);
+	}
+}
+
+.accordion_swap_icon {
+	width: 45px;
+	height: 45px;
+
+	position: relative;
+
+	align-items: center;
+	background: $accent;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+
+	@media print {
+		display: none;
+	}
+
+	&:before,
+	&:after {
+		width: 20px;
+		height: 2px;
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+
+		background: #fff;
+		border-radius: 2px;
+		content: "";
+		transition:
+			opacity 0.15s,
+			transform 0.15s;
+	}
+
+	&:before {
+		transform: translate(-50%, -50%);
+	}
+
+	&:after {
+		transform:
+			translate(-50%, -50%)
+			rotate(90deg);
+
+		.visible & {
+			transform:
+				translate(-50%, -50%)
+				rotate(0deg);
+		}
+	}
+}
+
+.accordion_content {
+	display: none;
+	overflow: hidden;
+	padding: 10px 0 40px 0;
+
+	@media print {
+		display: block;
+		padding: 0 0 20px;
+	}
+
+	&.visible {
+		display: block;
+	}
+
+	> *:first-child {
+		margin-top: 0;
+	}
+
+	> *:last-child {
+		margin-bottom: 0;
+	}
+}

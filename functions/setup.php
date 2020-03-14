@@ -31,8 +31,8 @@
 	}
 
 	function queue_scripts() {
-		wp_enqueue_style('style', get_stylesheet_uri());
-		wp_enqueue_style('googleFonts', '//fonts.googleapis.com/css?family=Open+Sans:300,400');
+		wp_enqueue_style('styles', get_template_directory_uri() . '/styles.css');
+		wp_enqueue_style('googleFonts', '//fonts.googleapis.com/css?family=Heebo');
 		wp_enqueue_script('jquery');
 		wp_enqueue_script(
 			'script',
