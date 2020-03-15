@@ -3130,9 +3130,6 @@ RSS
   @media (min-width: 980px) {
     .gallery_body {
       margin: 0 -40px; } }
-  @media (min-width: 1220px) {
-    .gallery_body {
-      margin: 0 -120px; } }
 
 .gallery_items {
   overflow: hidden; }
@@ -3158,16 +3155,13 @@ RSS
   width: 100%;
   display: block; }
 
-.gallery_details {
+.gallery_item_details {
   display: block;
   margin-top: 16px;
   padding: 0 20px; }
   @media (min-width: 980px) {
-    .gallery_details {
+    .gallery_item_details {
       padding: 0 40px; } }
-  @media (min-width: 1220px) {
-    .gallery_details {
-      padding: 0 120px; } }
 
 .gallery_index {
   font-size: 15px;

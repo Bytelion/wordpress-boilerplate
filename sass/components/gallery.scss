@@ -38,10 +38,6 @@
 	@media #{$min_lg} {
 		margin: 0 -40px;
 	}
-
-	@media #{$min_xl} {
-		margin: 0 -120px;
-	}
 }
 
 .gallery_items {
@@ -77,17 +73,13 @@
 	display: block;
 }
 
-.gallery_details {
+.gallery_item_details {
 	display: block;
 	margin-top: 16px;
 	padding: 0 20px;
 
 	@media #{$min_lg} {
 		padding: 0 40px;
-	}
-
-	@media #{$min_xl} {
-		padding: 0 120px;
 	}
 }
 
