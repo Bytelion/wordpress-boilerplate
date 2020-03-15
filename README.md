@@ -65,6 +65,10 @@ Now that you're ready to start, the rest is up to you. Generally there are a few
 * `style.css` Compiled file that represents the `/sass/` folder.
 * `utility.php` Functions to help build out php template files.
 
+## Browsersync Troubleshooting
+
+The `gulpfile` runs a browsersync instance based on the `"name"` field within `package.json`. Make sure this name points to the path used for your wordpress install. If the name is incorrect, everything will continue to work correctly except live reload.
+
 ## Additional Support
 
 ### Breadcrumbs
