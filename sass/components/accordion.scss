@@ -91,6 +91,7 @@
 	border-radius: 50%;
 	display: flex;
 	justify-content: center;
+	transition: background $base_speed;
 
 	@media print {
 		display: none;
@@ -127,6 +128,11 @@
 				translate(-50%, -50%)
 				rotate(0deg);
 		}
+	}
+
+	.accordion_swap &:hover,
+	.accordion_swap &:focus {
+		background: #000;
 	}
 }
 

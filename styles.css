@@ -1600,7 +1600,9 @@ RSS
   justify-content: flex-end; }
 
 .menu_button_icon {
-  pointer-events: none; }
+  position: relative;
+  top: -1px;
+  margin-right: 10px; }
 
 /* Menu Body
 ============================================================================= */
@@ -1641,12 +1643,15 @@ RSS
 .menu_close {
   position: absolute;
   top: 20px;
-  right: 0; }
+  right: 20px; }
 
 .menu_close_inner {
   align-items: center;
   display: flex;
   justify-content: flex-end; }
+
+.menu_close_icon {
+  margin-right: 10px; }
 
 /* ==========================================================================
 	Page
@@ -1885,7 +1890,8 @@ RSS
   background: #0070EB;
   border-radius: 50%;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  transition: background 0.25s; }
   @media print {
     .accordion_swap_icon {
       display: none; } }
@@ -1905,6 +1911,9 @@ RSS
     transform: translate(-50%, -50%) rotate(90deg); }
     .visible .accordion_swap_icon:after {
       transform: translate(-50%, -50%) rotate(0deg); }
+  .accordion_swap .accordion_swap_icon:hover,
+  .accordion_swap .accordion_swap_icon:focus {
+    background: #000; }
 
 .accordion_content {
   display: none;

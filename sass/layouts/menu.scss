@@ -23,11 +23,15 @@
 	justify-content: flex-end;
 }
 
+.menu_button_icon {
+	position: relative;
+	top: -1px;
+
+	margin-right: 10px;
+}
+
 .menu_button_label {}
 
-.menu_button_icon {
-	pointer-events: none;
-}
 
 
 /* Menu Body
@@ -81,7 +85,7 @@
 .menu_close {
 	position: absolute;
 	top: 20px;
-	right: 0;
+	right: 20px;
 }
 
 .menu_close_inner {
@@ -90,6 +94,8 @@
 	justify-content: flex-end;
 }
 
-.menu_close_icon {}
+.menu_close_icon {
+	margin-right: 10px;
+}
 
 .menu_close_label {}
