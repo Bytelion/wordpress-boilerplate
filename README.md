@@ -9,6 +9,7 @@ As this repo is a theme, make sure to [install wordpress](https://wordpress.org/
 Since this theme uses a gulp based workflow, you'll need a little extra work to manage custom blocks and styles. That includes setting up [node with npm](https://nodejs.org/en/) and following the prompts below. Open a terminal in the current Bytelion theme directory:
 
 ```
+composer install
 npm install gulp-cli -g
 npm install
 gulp
