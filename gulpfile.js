@@ -8,7 +8,7 @@ var packageJson = JSON.parse(fs.readFileSync('package.json'));
 
 
 function compileSass() {
-	return src('sass/styles.scss')
+	return src('sass/style.scss')
 		.pipe(sassGlob())
 		.pipe(sass().on('error', sass.logError))
 		.pipe(dest('./'))
