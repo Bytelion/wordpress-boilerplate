@@ -1,4 +1,69 @@
 /* ================
+Heading
+================ */
+
+.page {
+
+	> h1, h2, h3, h4, h5, h6 {
+		@include row;
+		@include margined;
+	}
+
+	> h1 {
+		@include h1;
+	}
+
+	> h2 {
+		@include h2;
+	}
+
+	> h3 {
+		@include h3;
+	}
+
+	> h4 {
+		@include h4;
+	}
+
+	> h5 {
+		@include h5;
+	}
+
+	> h6 {
+		@include h6;
+	}
+}
+
+
+/* ================
+Paragraph
+================ */
+
+.page {
+
+	> p {
+		@include row;
+		@include margined;
+		@include body_text;
+	}
+}
+
+
+/* ================
+Lists
+================ */
+
+.page {
+
+	> ul, ol {
+		@include row;
+		@include margined;
+		@include body_text;
+	}
+}
+
+
+/* ================
 Audio
 ================ */
 
