@@ -1,6 +1,6 @@
 # Bytelion Wordpress Theme
 
-This theme provides a skeleton set of starter gutenberg blocks and styles built around the gutenberg editor and extended with [Carbon Fields](https://carbonfields.net/). *We use it over here at [Bytelion](https://www.bytelion.com/) as the **defacto standard** for all of our website projects*. As a rule of thumb, all blocks are full-width and able to be placed on any page.
+This theme is *design agnostic* and meant to serve as a starting from scratch point for developers to build any design into wordpress. Under the hood it uses [Carbon Fields](https://carbonfields.net/) to consolidate the save and edit function of Gutenberg blocks into one function and allow for faster builds of custom blocks.
 
 ## Getting Started
 

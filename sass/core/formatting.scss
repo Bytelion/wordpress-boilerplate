@@ -45,37 +45,6 @@ Preformatted
 
 
 /* ================
-Pullquote
-================ */
-
-.wp-block-pullquote {
-	@include row;
-	@include margined;
-
-	blockquote {
-		margin: 0;
-	}
-
-	p {
-		@include intro_text;
-
-		margin: 0;
-	}
-
-	cite {
-		display: block;
-		font-style: normal;
-		margin-top: 10px;
-		text-align: right;
-
-		&:before {
-			content: "- ";
-		}
-	}
-}
-
-
-/* ================
 Table
 ================ */
 

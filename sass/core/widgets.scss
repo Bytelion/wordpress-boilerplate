@@ -86,3 +86,34 @@ RSS
 
 	margin-top: 10px;
 }
+
+
+/* ================
+Search
+================ */
+
+.wp-block-search {
+	@include row;
+	@include margined;
+}
+
+.wp-block-search__label {
+	display: block;
+}
+
+.wp-block-search__input {
+	padding: 14px 20px;
+}
+
+.wp-block-search__button {
+	@include button_fill;
+}
+
+
+/* ================
+Social Links
+================ */
+
+.wp-block-social-links {
+	list-style: none;
+}
